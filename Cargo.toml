@@ -1,6 +1,6 @@
 [package]
 name = "hikvision-mvs-sys"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = [
     "Daisuke Nishimatsu <daisuke.nishimatsu1021@gmail.com>",
@@ -8,6 +8,10 @@ authors = [
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/wep21/hikvision-mvs-sys"
 description = "Low-level bindings to the hikvision Machine Vision Software SDK"
+
+[package.metadata.docs.rs]
+targets = ["x86_64-unknown-linux-gnu"]
+rustdoc-args = ["--cfg", "docsrs"]
 
 [build-dependencies]
 bindgen = "0.69"
@@ -17,8 +21,4 @@ libc = "0.2"
 
 [dev-dependencies]
 image = "0.25.6"
-
-[package.metadata.docs.rs]
-targets = ["x86_64-unknown-linux-gnu"]
-rustdoc-args = ["--cfg", "docsrs"]
 
